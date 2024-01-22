@@ -1,6 +1,7 @@
 let inp=document.querySelector("#input");
 let btn=document.querySelector("button");
 let u=document.querySelector("#LIST");
+
 btn.addEventListener("click",function(){
   let item=document.createElement("li");
   item.innerText=inp.value;
@@ -14,7 +15,11 @@ btn.addEventListener("click",function(){
   
   inp.value="";
 
- 
-
-   
 });
+
+u.addEventListener("click",function(event){
+    if(event.target.nodeName=="BUTTON"){
+     let a= event.target.parentElement;
+      a.remove();
+    }
+})
